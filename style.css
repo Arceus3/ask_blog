@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9F6F7; /* Soft pinkish background */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 600px;
+  margin: 20px;
+  background-color: #FFFFFF; /* White container background */
+  padding: 50px;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.container .tenor-gif-embed {
+  max-width: 250px;
+}
+
+.container .btn {
+  display: flex;
+  gap: 25px;
+  justify-content: center; /* Center the buttons */
+}
+
+.btn a {
+  text-decoration: none;
+  color: #FFFFFF; /* Text color */
+  background: linear-gradient(45deg, #FF6B6B, #FF8E53); /* Gradient background */
+  padding: 15px 35px; /* Larger padding */
+  border-radius: 30px; /* More rounded corners */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3); /* Soft shadow */
+  overflow: hidden; /* Hide overflow */
+}
+
+.btn a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: -100%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn a:hover::before {
+  left: 100%;
+}
+
+.btn a span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn a:hover {
+  transform: translateY(-3px); /* Lift on hover */
+}
